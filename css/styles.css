@@ -1,0 +1,558 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+body{
+    font-family: 'Lato', sans-serif;
+    color: #353935;        
+}
+
+/* LOGO AND TOP MENU */
+/* header #nav-bar{
+    width: 100%;
+} */
+header #nav-bar a{
+    /* display: inline-block;
+    width: 100%;         */
+    text-decoration: none;
+    color: #000;
+    /* text-align: center;  */    
+}
+header #nav-bar ul{
+    display: flex;
+    gap: 85px;
+    padding: 20px 110px 20px 0;    
+    align-items: center;
+    list-style-type: none;
+    background-color: #e19f02;
+}
+/* header #nav-bar ul li{
+    flex: 1;
+} */
+/* header #nav-bar ul li:last-of-type{
+    margin-right: 50px;
+} */
+header #nav-bar ul li.logo{
+    /* flex: 5;     */
+    margin-right: auto;
+    margin-left: 40px;
+}
+header #nav-bar ul li.logo #header-img{
+    width: 100%;
+    max-width: 225px;
+  }
+
+/* FIRST SECTION WITH FORM */
+#first-section{        
+    padding: 40px;
+    position: relative;        
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+#first-section form{
+    margin-top: 5px;
+    display: block;
+}
+#first-section form input{
+    display: block;
+}
+input[type="email"]{
+    width: 280px;
+    height: 30px;
+}
+input[type="submit"]{
+    margin: 5px auto;    
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 0.99rem;
+    color:#28282B;
+    background-color: #e19f02;
+}
+
+/* SECOND SECTION CONTAINING SOME CONTENT */
+#features{
+    position: relative;        
+    padding: 40px;    
+}
+.features-box{
+    width: 70%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;    
+    margin: 0 auto;
+}
+.features-box .features-logo{    
+    width: 15%;    
+    padding: auto;
+    text-align: center;
+    margin-right: 40px;
+    padding-right: 30px;
+    padding-top: 15px;    
+    color: #B47F01;  
+}
+.features-box .features-content{
+    width:100%;      
+}
+.features-box p{
+    max-width: 95%;
+    margin-left: 0;
+}
+
+/* THIRD SECTION WITH A VIDEO  */
+#how-it-works{              
+    display: flex;
+    position: relative;  
+    margin: 0 auto;    
+    padding: 40px;
+    justify-content: center;    
+}
+#video{
+    max-width: 50%;              
+}
+
+/* FOURTH SECTION WITH CARDS FOR PRICE */
+#pricing{
+    position: relative;           
+    width: 70%;    
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;       
+}
+#pricing .cards{        
+    min-width:  33.33%;  
+    height: 80%;
+    margin: 10px;    
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+#pricing .card-title{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #dddddd;
+}
+#pricing .card-content{    
+    text-align: center;      
+    height: 85%;  
+}
+#pricing .card-content h1{
+    padding: 30px;
+}
+#pricing .card-content ul > li{
+    padding: 5px;
+    list-style: none;
+}
+#pricing .card-content button{
+    width: 100px;    
+    padding: 12px;
+    margin: 25px auto;
+    border-radius: 5px;
+    background-color: #e19f02;
+    font-size: 1rem;
+}
+
+/* FOOTER SECTION */
+#footer{
+    position: relative;    
+    width: 70%;
+    /* height: 80px; */
+    margin: 0 auto;
+    display: flex;  
+    flex-direction: column;    
+    justify-content: center;
+    background-color: #dddddd;    
+}
+#footer a{
+    text-decoration: none;
+    color: #000;
+}
+#footer ul, p{
+    display: flex;    
+    justify-content: flex-end; 
+    margin: 0 10px;   
+}
+#footer ul > li{
+    padding: 10px;
+    list-style: none;    
+}
+
+/* FOR SMALLER SCREENS */
+
+@media screen and (min-width: 1020px) and (max-width: 1062px){
+    #pricing .card-title{    
+        padding: 10px;
+        font-size: medium;        
+    }
+    #pricing .card-content{    
+        font-size: medium;
+    }
+    #pricing .card-content h1{
+        padding: 25px;
+        font-size: medium;
+    }
+    #pricing .card-content ul > li{
+        padding: 3px;
+        list-style: none;
+    }
+    #pricing .card-content button{        
+        padding: 10px;
+        margin: 20px auto;        
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1019px){
+    #pricing .card-title{    
+        padding: 8px;
+        font-size: small;        
+    }
+    #pricing .card-content{    
+        font-size: small;
+    }
+    #pricing .card-content h1{
+        padding: 25px;
+        font-size: small;
+    }
+    #pricing .card-content ul > li{
+        padding: 2px;
+        list-style: none;
+    }
+    #pricing .card-content button{        
+        padding: 8px;
+        margin: 15px auto;        
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 625px) and (max-width: 899px){    
+    /* LOGO AND TOP MENU */
+    header #nav-bar ul{        
+        flex-direction: column;
+        gap: 0px;
+        padding: 0;       
+    }
+    header #nav-bar ul li{
+        width: 100%;
+        border-bottom: 1pt solid;
+        border-color: aqua;        
+        padding: 10px;
+        text-align: center;        
+    }
+    header #nav-bar ul li.logo{
+        margin-left: 0;
+    }
+
+    /* FIRST SECTION WITH FORM */
+    #first-section{        
+        padding: 25px;                        
+    }
+    #first-section h2{
+        font-size: 1.3rem;
+    }        
+    input[type="email"]{
+        width: 270px;
+        height: 27px;
+    }
+    input[type="submit"]{
+        margin: 5px auto;    
+        width: 130px;
+        height: 27px;
+    }    
+
+    /* SECOND SECTION CONTAINING SOME CONTENT */
+    #features{
+        position: relative;            
+        margin: 5px;           
+    }
+    .features-box{
+        width: 90%;        
+        display: flex;    
+        margin: 5px auto;
+    }
+    .features-box .features-logo{    
+        width: 10%;                
+        color: #B47F01;  
+        font-size: 11px;
+    }
+    .features-box .features-content{
+        width:100%;      
+        font-size: 0.9rem;        
+    }
+
+    /* THIRD SECTION WITH A VIDEO  */        
+    #video{    
+        max-width: 75%;    
+        padding: 5px;           
+    }
+    /* FOURTH SECTION WITH CARDS FOR PRICE */    
+    #pricing{             
+        width: 80%;            
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+    #pricing .cards{        
+        min-width:  33.33%;          
+    }
+    #pricing .card-title{    
+        padding: 8px;
+        font-size: small;        
+    }
+    #pricing .card-content{    
+        font-size: small;
+    }
+    #pricing .card-content h1{
+        padding: 25px;
+        font-size: small;
+    }
+    #pricing .card-content ul > li{
+        padding: 2px;
+        list-style: none;
+    }
+    #pricing .card-content button{                
+        margin: 15px auto;        
+        font-size: 0.8rem;
+        font-weight: 401;
+        letter-spacing:0.2mm;
+    }  
+    #footer{
+        width: 100%;
+    }
+    #footer ul, p{     
+        justify-content: center; 
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 624px){
+    /* LOGO AND TOP MENU */
+    header #nav-bar ul{        
+        flex-direction: column;
+        gap: 0px;
+        padding: 0;       
+    }
+    header #nav-bar ul li{
+        width: 100%;
+        border-bottom: 1pt solid;
+        border-color: aqua;        
+        padding: 10px;
+        text-align: center;        
+    }
+    header #nav-bar ul li.logo{
+        margin-left: 0;
+    }
+
+    /* FIRST SECTION WITH FORM */
+    #first-section{        
+        padding: 25px 10px 10px 10px;                      
+    }
+    #first-section h2{
+        font-size: 1.3rem;
+    }        
+    input[type="email"]{
+        width: 270px;
+        height: 27px;
+    }
+    input[type="submit"]{
+        margin: 5px auto;    
+        width: 130px;
+        height: 27px;
+    }    
+
+    /* SECOND SECTION CONTAINING SOME CONTENT */
+    #features{
+        position: relative;            
+        margin: 5px;           
+    }
+    .features-box{
+        width: 90%;        
+        display: flex;    
+        margin: 5px 5px;
+    }
+    .features-box .features-logo{    
+        width: 10%;                
+        color: #B47F01;  
+        font-size: 11px;
+    }
+    .features-box .features-content{
+        width:100%;      
+        font-size: 0.9rem;        
+    }
+
+    /* THIRD SECTION WITH A VIDEO  */    
+    #video{    
+        min-width: 99%;    
+        padding: 5px 2px;           
+    }
+    /* FOURTH SECTION WITH CARDS FOR PRICE */    
+    #pricing{             
+        width: 95%;            
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+    #pricing .cards{        
+        min-width:  55%;          
+    }
+    #pricing .card-title{    
+        padding: 8px;
+        font-size: small;        
+    }
+    #pricing .card-content{    
+        font-size: 0.9rem;
+    }
+    #pricing .card-content h1{
+        padding: 25px;
+        font-size: 1rem;
+    }
+    #pricing .card-content ul > li{
+        padding: 2px;
+        list-style: none;
+    }
+    #pricing .card-content button{        
+        padding: 8px;
+        margin: 15px auto;        
+        font-size: 0.8rem;
+        font-weight: 401;
+        letter-spacing:0.2mm;
+    }
+     /* FOOTER SECTION */
+     #footer{        
+        width: 100%;          
+    }
+    #footer ul, p{     
+        font-size: 0.88rem;
+        margin: 0 auto;   
+    }
+    #footer ul > li{
+        padding: 8px;
+        list-style: none;    
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 449px) {
+    /* LOGO AND TOP MENU */
+    body{
+        border: 1px solid black;
+    }
+    header #nav-bar ul{        
+        flex-direction: column;
+        gap: 0px;
+        padding: 0;       
+    }
+    header #nav-bar ul li{
+        width: 100%;
+        border-bottom: 1pt solid;
+        border-color: aqua;        
+        padding: 10px;
+        text-align: center;        
+    }
+    header #nav-bar ul li.logo{
+        margin-left: 0;
+    }
+
+    /* FIRST SECTION WITH FORM */
+    #first-section{        
+        padding: 25px 10px 10px 10px;           
+    }
+    #first-section h2{
+        font-size: 1.18rem;
+        text-align: center;
+    }        
+    input[type="email"]{
+        width: 250px;
+        height: 27px;
+    }
+    input[type="submit"]{
+        margin: 5px auto;    
+        width: 130px;
+        height: 27px;
+    }    
+
+    /* SECOND SECTION CONTAINING SOME CONTENT */
+    #features{
+        position: relative;        
+        padding: 5px;    
+    }
+    .features-box{
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;          
+        gap: 5px;              
+        flex-wrap: wrap;
+        text-align: center;        
+        justify-content: center;        
+    }
+    .features-box .features-logo{    
+        width: 18%;            
+        text-align:end;                
+        color: #B47F01; 
+        font-size: small;        
+        margin: 0 auto;
+    }    
+    .features-box .features-content{
+        width:100%;      
+        font-size: 0.9rem;        
+    }
+    .features-box p{
+        min-width: 99%;        
+    }
+
+    /* THIRD SECTION WITH A VIDEO  */    
+    #video{    
+        width: 100%;
+        min-width: 99%;    
+        padding: 5px 0;        
+    }    
+    /* FOURTH SECTION WITH CARDS FOR PRICE */    
+    #pricing{             
+        width: 95%;            
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+    #pricing .cards{        
+        min-width:  75%;          
+    }
+    #pricing .card-title{    
+        padding: 8px;
+        font-size: small;        
+    }
+    #pricing .card-content{    
+        font-size: 0.9rem;
+    }
+    #pricing .card-content h1{
+        padding: 25px;
+        font-size: 1rem;
+    }
+    #pricing .card-content ul > li{
+        padding: 2px;
+        list-style: none;
+    }
+    #pricing .card-content button{        
+        padding: 8px;
+        margin: 15px auto;        
+        font-size: 0.8rem;
+        font-weight: 401;
+        letter-spacing:0.2mm;
+    }    
+
+    /* FOOTER SECTION */
+    #footer{        
+        width: 100%;          
+    }
+    #footer ul, p{     
+        font-size: 0.85rem;
+        margin: 0 auto;   
+    }
+    #footer ul > li{
+        padding: 8px;
+        list-style: none;    
+    }
+}
+
